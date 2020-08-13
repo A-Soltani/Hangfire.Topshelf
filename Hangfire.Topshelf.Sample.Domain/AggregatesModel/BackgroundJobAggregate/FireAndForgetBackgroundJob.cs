@@ -5,19 +5,16 @@ using Hangfire.Topshelf.Sample.Domain.AggregatesModel.BackgroundJobAggregate.Bac
 
 namespace Hangfire.Topshelf.Sample.Domain.AggregatesModel.BackgroundJobAggregate
 {
-    public class RecurringBackgroundJob : IBackgroundJob
+    public class FireAndForgetBackgroundJob: IBackgroundJob
     {
         public string Id { get; set; }
         public BackgroundJobType BackgroundJobType { get; set; }
         public BackgroundJobStateType StateType { get; set; }
         public Action MethodCall { get; set; }
 
-        private RecurringBackgroundJob()
+        public FireAndForgetBackgroundJob()
         {
-            BackgroundJobType = BackgroundJobType.Recurring;
+            BackgroundJobType = BackgroundJobType.FireAndForget;
         }
-
-        public RecurringBackgroundJob CreateRecurringBackgroundJob() => new RecurringBackgroundJob();
-
     }
 }

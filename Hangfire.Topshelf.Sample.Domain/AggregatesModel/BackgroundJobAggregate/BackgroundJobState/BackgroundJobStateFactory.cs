@@ -5,7 +5,12 @@ using System.Text;
 
 namespace Hangfire.Topshelf.Sample.Domain.AggregatesModel.BackgroundJobAggregate.BackgroundJobState
 {
-    public class BackgroundJobStateFactory
+    public interface IBackgroundJobStateFactory
+    {
+        IBackgroundJobState GetState(BackgroundJobStateType stateType);
+    }
+
+    public class BackgroundJobStateFactory : IBackgroundJobStateFactory
     {
         private readonly IEnumerable<IBackgroundJobState> _backgroundJobStates;
 

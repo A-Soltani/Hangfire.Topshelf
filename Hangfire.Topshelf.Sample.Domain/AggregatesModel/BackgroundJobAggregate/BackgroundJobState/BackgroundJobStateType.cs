@@ -7,7 +7,7 @@ namespace Hangfire.Topshelf.Sample.Domain.AggregatesModel.BackgroundJobAggregate
     public enum BackgroundJobStateType
     {
         Waiting = 1,
-        AddedToQueue = 2,
+        AddedToQueue = 2, // Enqueued
         InProgress = 3,
         Success = 4,
         Fail = 5

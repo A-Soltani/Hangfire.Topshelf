@@ -5,9 +5,15 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7B565E68-9FED-44F9-8CD8-9482672134E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Topshelf.Sample.UnitTests", "Tests\Hangfire.Topshelf.Sample.UnitTests\Hangfire.Topshelf.Sample.UnitTests.csproj", "{27295BDA-40ED-45D0-A5D1-3E4FFCB73C9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Topshelf.Sample.UnitTests", "Tests\Hangfire.Topshelf.Sample.UnitTests\Hangfire.Topshelf.Sample.UnitTests.csproj", "{27295BDA-40ED-45D0-A5D1-3E4FFCB73C9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Topshelf.Sample.Domain", "Hangfire.Topshelf.Sample.Domain\Hangfire.Topshelf.Sample.Domain.csproj", "{16D1CDA1-9689-4756-9FA5-88974C6D1292}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangfire.Topshelf.Sample.Domain", "Hangfire.Topshelf.Sample.Domain\Hangfire.Topshelf.Sample.Domain.csproj", "{16D1CDA1-9689-4756-9FA5-88974C6D1292}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Topshelf.Sample.WindowsService", "Hangfire.Topshelf.Sample.WindowsService\Hangfire.Topshelf.Sample.WindowsService.csproj", "{467AA0B4-F19E-4279-9199-B26FD8CF6ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Topshelf.Sample.ApplicationService", "Hangfire.Topshelf.Sample.ApplicationService\Hangfire.Topshelf.Sample.ApplicationService.csproj", "{3E15EA25-1677-4ED9-8600-2768A785CA54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hangfire.Topshelf.Sample.Infrastucture", "Hangfire.Topshelf.Sample.Infrastucture\Hangfire.Topshelf.Sample.Infrastucture.csproj", "{6BD53C9C-6B30-401F-B14E-937E9D65C7A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,18 @@ Global
 		{16D1CDA1-9689-4756-9FA5-88974C6D1292}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{16D1CDA1-9689-4756-9FA5-88974C6D1292}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{16D1CDA1-9689-4756-9FA5-88974C6D1292}.Release|Any CPU.Build.0 = Release|Any CPU
+		{467AA0B4-F19E-4279-9199-B26FD8CF6ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{467AA0B4-F19E-4279-9199-B26FD8CF6ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{467AA0B4-F19E-4279-9199-B26FD8CF6ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{467AA0B4-F19E-4279-9199-B26FD8CF6ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E15EA25-1677-4ED9-8600-2768A785CA54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E15EA25-1677-4ED9-8600-2768A785CA54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E15EA25-1677-4ED9-8600-2768A785CA54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E15EA25-1677-4ED9-8600-2768A785CA54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BD53C9C-6B30-401F-B14E-937E9D65C7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD53C9C-6B30-401F-B14E-937E9D65C7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD53C9C-6B30-401F-B14E-937E9D65C7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD53C9C-6B30-401F-B14E-937E9D65C7A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

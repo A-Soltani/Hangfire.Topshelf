@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Domain\BackgroundJobAggregate\" />
+    <ProjectReference Include="..\..\Hangfire.Topshelf.Sample.Domain\Hangfire.Topshelf.Sample.Domain.csproj" />
   </ItemGroup>
 
 </Project>
