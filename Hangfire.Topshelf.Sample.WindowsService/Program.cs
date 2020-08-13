@@ -1,5 +1,8 @@
-﻿using System;
+﻿using Microsoft.Extensions.Configuration;
+using System;
 using System.IO;
+using Serilog;
+using static Hangfire.Topshelf.Sample.WindowsService.Infrastructure.Serilog.SerilogLogger;
 
 namespace Hangfire.Topshelf.Sample.WindowsService
 {
@@ -16,7 +19,7 @@ namespace Hangfire.Topshelf.Sample.WindowsService
             var configuration = GetConfiguration();
 
             // Serilog config
-            //Log.Logger = CreateSerilogLogger(configuration);
+            Log.Logger = CreateSerilogLogger(configuration);
 
             try
             {
@@ -33,10 +36,9 @@ namespace Hangfire.Topshelf.Sample.WindowsService
 
         }
 
-        private static IConfiguration GetConfiguration(IConfiguration configuration)
+        private static IConfiguration GetConfiguration(/*IConfiguration configuration*/)
         {
             var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
                 .AddEnvironmentVariables();
 

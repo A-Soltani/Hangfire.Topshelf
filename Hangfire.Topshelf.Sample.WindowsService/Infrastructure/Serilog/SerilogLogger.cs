@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Microsoft.Extensions.Configuration;
+using Serilog;
 
 namespace Hangfire.Topshelf.Sample.WindowsService.Infrastructure.Serilog
 {
     public static class SerilogLogger
     {
        
-        public ILogger static CreateSerilogLogger(IConfiguration configuration)
-        {
-           return new LoggerConfiguration()
+        public static ILogger CreateSerilogLogger(IConfiguration configuration) =>
+            new LoggerConfiguration()
                 .ReadFrom.Configuration(configuration)
                 .Enrich.WithProperty("ApplicationContext", Program.AppName)
                 .CreateLogger();
-        }
     }
 }
