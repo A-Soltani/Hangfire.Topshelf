@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hangfire.Topshelf.Sample.WindowsService.Infrastructure.AutofacModules
+﻿namespace Hangfire.Topshelf.Sample.WindowsService.Infrastructure.Autofac.AutofacModules
 {
     public class AutofacApplicationModule /*: Module*/
     {

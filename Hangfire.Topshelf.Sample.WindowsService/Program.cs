@@ -14,16 +14,14 @@ namespace Hangfire.Topshelf.Sample.WindowsService
         static void Main(string[] args)
         {
             // DI
-            // RegisterServices
+            RegisterServices();
 
             var configuration = GetConfiguration();
-
-            // Serilog config
             Log.Logger = CreateSerilogLogger(configuration);
 
             try
             {
-                //Log.Information("Configuring Windows service ({ApplicationContext})...", AppName);
+                Log.Information("Configuring Windows service ({ApplicationContext})...", AppName);
                 //var service = BuildWindowsService();
 
 
@@ -36,7 +34,13 @@ namespace Hangfire.Topshelf.Sample.WindowsService
 
         }
 
-        private static IConfiguration GetConfiguration(/*IConfiguration configuration*/)
+
+        private static void RegisterServices()
+        {
+            
+        }
+
+        private static IConfiguration GetConfiguration()
         {
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)

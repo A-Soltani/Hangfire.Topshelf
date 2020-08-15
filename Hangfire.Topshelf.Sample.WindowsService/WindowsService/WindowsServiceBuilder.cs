@@ -2,11 +2,16 @@
 
 namespace Hangfire.Topshelf.Sample.WindowsService.WindowsService
 {
-    public class WindowsService: IWindowsService
+    public class WindowsServiceBuilder: IWindowsServiceBuilder
     {
         public string ServiceName => "TestService";
         public string ServiceDisplayName => "Test Service";
         public string ServiceDescription => "This is for test";
+        public void BuildService()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Start()
         {
             throw new NotImplementedException();
