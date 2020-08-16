@@ -4,11 +4,11 @@ using Xunit;
 
 namespace Hangfire.Topshelf.Sample.UnitTests.Domain.AggregatesModel.BackgroundJobAggregate
 {
-    public class BackgroundJobStateFactory
+    public class BackgroundJobStateFactoryTests
     {
         private readonly IBackgroundJobStateFactory _backgroundJobStateFactory;
 
-        public BackgroundJobStateFactory(IBackgroundJobStateFactory backgroundJobStateFactory) => _backgroundJobStateFactory = backgroundJobStateFactory ?? throw  new ArgumentNullException(nameof(backgroundJobStateFactory));
+        public BackgroundJobStateFactoryTests(IBackgroundJobStateFactory backgroundJobStateFactory) => _backgroundJobStateFactory = backgroundJobStateFactory ?? throw  new ArgumentNullException(nameof(backgroundJobStateFactory));
 
         [Fact]
         public void GetState_BackgroundJobStateTypeIsWaiting_WaitingStateShouldBeReturned()
